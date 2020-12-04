@@ -1,0 +1,21 @@
+@import "home.css";
+@import "items.css";
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+#bg {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+  margin: 0;
+}

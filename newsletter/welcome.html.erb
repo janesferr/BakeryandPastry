@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="border:2px solid gray;">
+    <h1 style="text-align:center;font-size:4.5em;padding-top:20px;">Olivia's Bakery</h1>
+    <h2 style="margin-left:24%;text-align:center;width:500px;padding-top:10px;padding-bottom:20px;">View a sample of our items below, and visit our website at <a href="#">oliviasbakery.com</a> for our current selection.</h2>
+    <h2 style="text-align:center;">Cookies</h2>
+    <% $all_cookies.each do |cookie| %>
+    <div class="wrapper" style="text-align:center;">
+      <div class="text"><h3><%= cookie.name %></h3><h4><%= cookie.price %></h4><p><%= cookie.description %></p></div>
+    </div>
+    <% end %>
+    <h2 style="text-align:center;">Cakes</h2>
+    <% $all_cakes.each do |cake| %>
+    <div class="wrapper" style="text-align:center;">
+      <div class="text"><h3><%= cake.name %></h3><h4><%= cake.price %></h4><p><%= cake.description %></p></div>
+    </div>
+    <% end %>
+    <h2 style="text-align:center;">Pastries</h2>
+    <% $all_pastries.each do |pastry| %>
+    <div class="wrapper" style="text-align:center;">
+      <div class="text"><h3><%= pastry.name %></h3><h4><%= pastry.price %></h4><p><%= pastry.description %></p></div>
+    </div>
+    <% end %>
+  </body>
+</html>

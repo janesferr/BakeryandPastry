@@ -1,0 +1,27 @@
+<div id="bg">
+  <img class="d-block w-100" id="bg-photo-page" src="background.jpg"</img>
+</div>
+<nav id="navbar">
+  <div class="home" onclick="load_out_pages('/')">
+    <h2>O</h2>
+  </div>
+  <ul>
+    <li><button onclick="load_out_pages('/cookies')">Cookies</button></li>
+    <li><button onclick="load_out_pages('/cakes')">Cakes</button></li>
+    <li><button onclick="load_out_pages('/pastries')">Pastries</button></li>
+  </ul>
+  <input id="icon" type="image" src="envelope.png" />
+  <h3 id="req">request full catalog</h3>
+  <form id="form" action="/cake_order" method="post">
+    <input type="text" name="email" value=""></input>
+    <input id="send" type="submit" name="" value="send"></input>
+  </form>
+</nav>
+<div class="container" id="container">
+  <div class="row">
+    <% @cakes.each do |cake| %>
+    <div class="col-sm-4"><div class="photo-frame"><div class="photo"><img src=<%= cake.photo%>></img></div></div><div class="text"><span><%= cake.name %></span><h3><%= cake.price %></h3><p><%= cake.description %><p></div></div>
+    <% end %>
+  </div>
+</div>
+<script src="sub.js"></script>

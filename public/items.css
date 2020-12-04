@@ -1,0 +1,183 @@
+@import "main.css";
+
+#bg-photo-page {
+  opacity: 0.3;
+  transition-duration: 1s;
+}
+
+nav {
+  background-color: rgb(58, 78, 58);
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 1;
+  animation-name: slidedown-nav;
+  animation-duration: 1s;
+  top: 0;
+  padding-left: 40px;
+  transition-duration: 1s;
+}
+
+@keyframes slidedown-nav {
+  from {top: -50%;}
+  to {top: 0;}
+}
+
+nav div {
+  display: block;
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+nav div h2 {
+  font-family: 'Cormorant Garamond';
+  font-size: 3em;
+  color: white;
+  border: 2px solid white;
+  margin-top: 10px;
+  padding: 0 10px 0 10px;
+  width: 60px;
+}
+
+nav h3 {
+  color: rgb(91, 121, 92);
+  position: absolute;
+  right: 80px;
+  top: 30px;
+  font-size: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  display: block;
+  float: left;
+}
+
+nav ul li {
+  display: inline;
+  font-size: 15px;
+}
+
+nav ul li a {
+  color: white;
+}
+
+button {
+  color: white;
+  border: none;
+  background-color: rgb(58, 78, 58);
+  height: 80px;
+}
+
+button:hover {
+  background-color: rgb(91, 121, 92);
+}
+
+form {
+  display: block;
+  float: right;
+  margin-top: -30px;
+  margin-right: 20px;
+  transition-duration: 0.5s;
+}
+
+input {
+  color: rgb(91, 121, 92);
+  border: none;
+  background-color: white;
+}
+
+input:focus {
+  outline: 0;
+}
+
+#icon {
+  display: block;
+  float: right;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin-right: 20px;
+  margin-top: 15px;
+  transition: transform 0.5s;
+}
+
+#icon:hover{
+  transform: rotate(360deg);
+}
+
+#send {
+  background-color: rgb(91, 121, 92);
+  color: white;
+}
+
+.container {
+  margin-top: 100px;
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  animation-name: slideup;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  margin-left: 10%;
+  margin-right: 10%;
+  transition-duration: 1s;
+}
+
+@keyframes slideup {
+  from {top: 150%;}
+  to {top: 0px;}
+}
+
+.container span {
+  text-align: center;
+  font-size: 55px;
+  font-family: 'Cormorant Garamond';
+  line-height: 0.8;
+  height: 100%;
+}
+
+#col-sm-4 {
+  padding: 0;
+}
+
+div.photo-frame {
+  height: 400px;
+  overflow: hidden;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  background-color: white;
+  width: 100%;
+  object-fit: contain;
+  outline: 2px solid gray;
+  outline-offset: -15px;
+}
+
+div.photo {
+  height: 350px;
+  overflow: hidden;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.photo img {
+  height: 450px;
+}
+
+div.text {
+  background-color: rgb(58, 78, 58);
+  padding-top: 30px;
+  padding-bottom: 10px;
+  outline: 2px solid white;
+  outline-offset: -15px;
+  color: white;
+}
+
+div.text h3 {
+  font-family: 'Cormorant Garamond';
+  font-size: 2em;
+}
